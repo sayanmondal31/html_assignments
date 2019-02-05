@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <script>
+            var question = "what is 10+10?"
+            var ans=20;
+            var correct = '<img src = "a.jpg" alt = "image 1">';
+            var incorrect = '<img src = "a.jpg" alt = "image 2">';
+            var response = prompt(question,"0");
+            for (var count = 1;count<3;count++)
+            {
+                if(response!=ans)
+                {
+                    if(confirm("wrong , press ok for another chance"))
+                    {
+                        response = prompt(question,"0");
+                    }
+                    else{
+                        alert("great ! you are right!");
+                        count = 3;
+                    }
+                }
+                else{
+                    alert("great , you are right!!");
+                    count = 3;
+                }
+            }
+            var output=(response == ans)?correct:incorrect;
+            document.write("<br>");
+            document.write(output);
+            
+
+            </script>
+    </body>
+</html>
